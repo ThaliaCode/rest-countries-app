@@ -5,6 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="main1.js"></script>
+    <script src="todaslasbandera.js" type="module"></script>
+    <script src="darkmode.js" type="module"> </script>
     <link rel="stylesheet" href="style.css" />
 
     <title>cartas</title>
@@ -19,7 +21,7 @@
     <main class="bg-gray-100 pt-5 px-5 dark:bg-[#202d36] dark:text-white">
       <div class="flex flex-col md:flex-row justify-between md:px-15 md:py-10 gap-8 mb-10">
         <div>
-          <input
+          <input id="filtroInput"
             class="bg-white  dark:bg-[#2b3743] px-7 py-5 shadow rounded-md w-96 md:w-100"
             type="search"
             placeholder="Search for country"
@@ -28,18 +30,19 @@
 
         <select 
           class="bg-white dark:bg-[#2b3743] w-64 px-8 py-4 shadow rounded-md"
-          id="region-filter"
+          id="filtroRegion"
         >
-          <option>Filter by Region</option>
-          <option>Africa</option>
-          <option>America</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>Oceania</option>
+          <option value="Todas" >Todas</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+            <option value="Polar">Polar</option>
         </select>
       </div>
-      <section class="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-10 ">
-        <!-- CARD 1 -->
+      <section id="banderas" class="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-10 ">
+        <!-- CARD 1
         <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow h-100">
           <img class="object-3/2" src="https://flagcdn.com/de.svg" alt="Germany" />
 
@@ -52,7 +55,7 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img class="object-3/2" src="https://flagcdn.com/us.svg" alt="United States" />
 
           <div class="px-6 py-10">
@@ -61,9 +64,9 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-        </div>
+        </div> -->
         <!-- CARD 3 -->
-        <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img class="object-3/2" src="https://flagcdn.com/br.svg" alt="United States" />
            <div class="px-6 py-10">
             <p class="text-3xl font-bold mb-4">United States</p>
@@ -71,10 +74,10 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-          </div>
+          </div> -->
 
            <!-- CARD 4 -->
-        <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img src="https://flagcdn.com/is.svg" class="object-3/2" alt="United States" />
 
            <div class="px-6 py-10">
@@ -83,9 +86,9 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-          </div>
+          </div> -->
           <!-- CARD 5 -->
-        <div class="max-w-75 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img src="https://flagcdn.com/af.svg" class="object-3/2" alt="United States" />
 
            <div class="px-6 py-10">
@@ -94,9 +97,9 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-        </div>
+        </div> -->
          <!-- CARD 6 -->
-        <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img src="https://flagcdn.com/ax.svg" class="object-3/2" alt="United States" />
 
            <div class="px-6 py-10">
@@ -105,9 +108,9 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-        </div>
+        </div> -->
          <!-- CARD 7 -->
-        <div class="max-w-75 bg-white  dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 bg-white  dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img src="https://flagcdn.com/al.svg" class="object-3/2" alt="United States" />
 
            <div class="px-6 py-10">
@@ -116,9 +119,9 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-        </div>
+        </div> -->
            <!-- CARD 8 -->
-        <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
+        <!-- <div class="max-w-75 md:-max-w-72 bg-white dark:bg-[#2b3743] rounded-md overflow-hidden shadow">
           <img src="https://flagcdn.com/dz.svg" class="object-3/2" alt="United States" />
 
            <div class="px-6 py-10">
@@ -127,7 +130,7 @@
             <p> <samp class=" text-xl ">Region:</samp> Americas</p>
             <p> <samp class=" text-xl ">Capital:</samp>  Washington, D.C.</p>
           </div>
-        </div>
+        </div> --> -->
       </section>
     </main>
   </body>
