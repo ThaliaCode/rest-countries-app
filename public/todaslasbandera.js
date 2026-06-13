@@ -1,5 +1,7 @@
 let banderas = document.querySelector("#banderas")
-
+/**
+ * esta funcion hace  un fetch a data.json para  leer los datos
+ * */
 
 async function  traerBanderas() {
     try{
@@ -33,6 +35,10 @@ console.log(dataBanderas[0])
 //           </div>
 //         </div>`
 
+/**
+ * esta funcio crea las cartas de las banderas  de los paises  que se encuentran dentro del array 
+ * 
+ */
        function mostrarPaises(grupoDePaises){
 
         for (let i = 0; i <grupoDePaises.length; i++) {
@@ -51,9 +57,10 @@ console.log(dataBanderas[0])
 
    }     
 
-
-   let paisesDeAfrica = dataBanderas.filter(pais=>pais.region ==="Africa")
-   let paisesDeAsia = dataBanderas.filter(pais=>pais.region ==="asia")
+//  filtroregiones  es al selec que tienes opciones en el html 
+  //  let paisesDeAfrica = dataBanderas.filter(pais=>pais.region ==="Africa")
+ 
+  //  let paisesDeAsia = dataBanderas.filter(pais=>pais.region ==="asia")
 
 
        let filtroRegion =document.querySelector("#filtroRegion")
@@ -62,7 +69,11 @@ console.log(dataBanderas[0])
       filtroRegion.addEventListener("change", filtrarPaises)
       filtroInput.addEventListener("input", filtrarPaises)
 
-
+/**
+ * esta funcion de filtrar paises aplica 2 filtros : 
+ * 1-region: segun lo que selecciones en el selectde id "filtroregion" 
+ * 2-por input: segun lo que se escriba en el input de id "filtroinput" 
+ * */
       function filtrarPaises(){
         
           let region = filtroRegion.value
